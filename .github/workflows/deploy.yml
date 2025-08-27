@@ -1,26 +1,18 @@
-name: Build Test and deploy
+name: node version print
 on:
   push:
     branches:
       - main
 
 jobs:
-  test:
+  install-node:
     runs-on: ubuntu-latest
     steps:
-      - name: Test check
-        run: echo "Testing..................."
-
-  build:
-    needs: test
+      - name: Install node
+        run: actions/checkout@v4
+  print-version:
+    needs: install-node
     runs-on: ubuntu-latest
     steps:
-      - name: Build
-        run: echo "Buildinggg................"
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy
-        run: echo "Deply sucessfully"
+      - name: print node version
+        run: node --version
