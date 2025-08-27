@@ -7,5 +7,5 @@ jobs:
   hello-jobs:
       runs-on: ubuntu-latest
       steps:
-        - name: Print Hello world 
+        - name: Print Hello world
           run: echo "Hello World welcome back prince"

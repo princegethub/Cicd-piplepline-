@@ -1,0 +1,11 @@
+name: Greeting hello pull the code
+on:
+  push:
+    branches:
+      - main
+jobs:
+  greeting-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello world
+        run: echo "The github actor name is $GITHUB_ACTOR"
