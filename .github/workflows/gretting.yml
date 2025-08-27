@@ -13,4 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print hello world
-        run: echo "The github actor name is $GITHUB_ACTOR"
+        run: echo "The github actor name is $GITHUB_ACTOR evert"
+
+      - name: Every pr
+        run: echo "This is pr request"
+
