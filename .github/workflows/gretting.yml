@@ -1,8 +1,13 @@
 name: Greeting hello pull the code
+# on:
+#   push:
+#     branches:
+#       - main
 on:
-  push:
+  pull_request:
     branches:
       - main
+
 jobs:
   greeting-hello:
     runs-on: ubuntu-latest
