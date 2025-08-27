@@ -1,0 +1,19 @@
+name: Matrix Build Example
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16, 18, 19]
+    steps:
+      - uses : actions/checkout@v3
+      - name : Setup Node jobs
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node}}
+
+      - name : Print node node-version
+        run : node -version
